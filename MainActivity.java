@@ -15,10 +15,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ttv=(TextView)findViewById(R.id.tv);
-
-        for(i=9;i>0;i--)
+        b="";
+        for(i=1;i<10;i++)
         {
-            for(j=9;j>0;j--)
+            for(j=1;j<10;j++)
             {
                 //補空格
                 if((i*j)<10)
@@ -33,10 +33,11 @@ public class MainActivity extends AppCompatActivity {
                 {
                     a=a+"\n";
                 }
-                b=a+b;
+
+                b=b+a;
             }
             //每一種換行
-            b="\n"+b;
+            b=b+"\n";
         }
         ttv.setText(b);
     }
